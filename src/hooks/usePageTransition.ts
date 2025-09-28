@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 
 export type PageType = 'cover' | 'mission' | 'package' | 'departure' | 'bear' | 'wind' | 'party' | 'delivery' | 'cake' | 'victory';
 
@@ -6,10 +6,10 @@ export function usePageTransition() {
   const [currentPage, setCurrentPage] = useState<PageType>('cover');
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const pages: PageType[] = [
+  const pages = useMemo<PageType[]>(() => [
     'cover', 'mission', 'package', 'departure', 'bear', 
     'wind', 'party', 'delivery', 'cake', 'victory'
-  ];
+  ], []);
 
   const nextPage = useCallback(async () => {
     const currentIndex = pages.indexOf(currentPage);

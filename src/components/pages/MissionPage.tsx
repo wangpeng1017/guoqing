@@ -96,7 +96,7 @@ export default function MissionPage({ onNext }: MissionPageProps) {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
           >
-            "飞飞，这是一颗神奇的红宝石，需要你送到派对现场！"
+&ldquo;飞飞，这是一颗神奇的红宝石，需要你送到派对现场！&rdquo;
           </motion.p>
         </div>
 

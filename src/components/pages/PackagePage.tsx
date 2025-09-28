@@ -41,7 +41,7 @@ export default function PackagePage({ onNext }: PackagePageProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        制作"鸡毛信"
+制作&ldquo;鸡毛信&rdquo;
       </motion.h2>
 
       <div className="flex flex-col items-center">
@@ -143,7 +143,7 @@ export default function PackagePage({ onNext }: PackagePageProps) {
             }}
             transition={{ 
               duration: 1,
-              ease: "cubicBezier(0.25, 0.46, 0.45, 0.94)"
+              ease: [0.25, 0.46, 0.45, 0.94]
             }}
           >
             <svg width="60" height="45" viewBox="0 0 60 45">
@@ -181,7 +181,7 @@ export default function PackagePage({ onNext }: PackagePageProps) {
             在古代，红色羽毛代表十万火急的重要信件
           </p>
           <p className="text-sm text-purple-600 mt-2">
-            点击羽毛，完成"鸡毛信"的制作
+点击羽毛，完成&ldquo;鸡毛信&rdquo;的制作
           </p>
         </motion.div>
       )}

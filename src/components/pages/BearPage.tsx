@@ -22,7 +22,7 @@ export default function BearPage({ onNext }: BearPageProps) {
     setBirdPosition(newSteps * 100);
     
     // 播放踮脚音效
-    playSound('swoosh.mp3', { volume: 0.3 }); // 轻微音效
+    playSound('swoosh.mp3', { volume: 0.3 });
     
     // 完成所有步骤后
     if (newSteps >= 4) {
@@ -223,7 +223,7 @@ export default function BearPage({ onNext }: BearPageProps) {
               
               <rect x="32" y="28" width="16" height="8" rx="2" fill="#8B5CF6" />
               <path d="M48 30 Q51 27 49 33 Q48 34 46 33 Z" fill="#DC2626" />
-            </svg>
+            </motion.svg>
             
             <motion.p
               className="text-green-600 font-bold text-center mt-2"

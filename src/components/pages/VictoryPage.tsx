@@ -8,7 +8,7 @@ interface VictoryPageProps {
   onNext: () => void;
 }
 
-export default function VictoryPage({ onNext }: VictoryPageProps) {
+export default function VictoryPage({ }: VictoryPageProps) {
   const [medalGiven, setMedalGiven] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [showReplayButton, setShowReplayButton] = useState(false);

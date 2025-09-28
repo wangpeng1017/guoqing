@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useSound } from '@/hooks/useSound';
 
@@ -12,7 +12,6 @@ export default function PartyPage({ onNext }: PartyPageProps) {
   const [isHovering, setIsHovering] = useState(false);
   const [showNextButton, setShowNextButton] = useState(false);
   const { playSound } = useSound();
-  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const handleHover = (hovering: boolean) => {
     setIsHovering(hovering);
