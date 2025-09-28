@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Audio files (temporary - remove when adding real audio files)
+/public/sounds/*.mp3
