@@ -9,7 +9,13 @@ import { useEffect } from 'react';
 import CoverPage from '@/components/pages/CoverPage';
 import MissionPage from '@/components/pages/MissionPage';
 import PackagePage from '@/components/pages/PackagePage';
-// TODO: 导入其他页面组件
+import DeparturePage from '@/components/pages/DeparturePage';
+import BearPage from '@/components/pages/BearPage';
+import WindPage from '@/components/pages/WindPage';
+import PartyPage from '@/components/pages/PartyPage';
+import DeliveryPage from '@/components/pages/DeliveryPage';
+import CakePage from '@/components/pages/CakePage';
+import VictoryPage from '@/components/pages/VictoryPage';
 
 export default function Home() {
   const { currentPage, nextPage, resetToFirstPage } = usePageTransition();
@@ -37,7 +43,20 @@ export default function Home() {
         return <MissionPage onNext={nextPage} />;
       case 'package':
         return <PackagePage onNext={nextPage} />;
-      // TODO: 添加其他页面的渲染
+      case 'departure':
+        return <DeparturePage onNext={nextPage} />;
+      case 'bear':
+        return <BearPage onNext={nextPage} />;
+      case 'wind':
+        return <WindPage onNext={nextPage} />;
+      case 'party':
+        return <PartyPage onNext={nextPage} />;
+      case 'delivery':
+        return <DeliveryPage onNext={nextPage} />;
+      case 'cake':
+        return <CakePage onNext={nextPage} />;
+      case 'victory':
+        return <VictoryPage onNext={nextPage} />;
       default:
         return <CoverPage onNext={nextPage} />;
     }

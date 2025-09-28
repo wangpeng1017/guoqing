@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 小信鸽飞飞的国庆节任务 🕊️🎉
 
-## Getting Started
+一个精美的国庆节主题互动故事应用，讲述小信鸽飞飞完成送信任务的冒险故事。
 
-First, run the development server:
+## ✨ 特性
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 🎨 **精美动画** - 使用 Framer Motion 制作流畅的交互动画
+- 🎵 **音效支持** - 每个交互都有对应的音效反馈
+- 📱 **响应式设计** - 完美适配桌面端和移动端
+- 🎭 **互动故事** - 10个精心设计的交互页面
+- 🌈 **色彩鲜艳** - 卡通风格的SVG插图
+
+## 📖 故事概述
+
+跟随小信鸽飞飞的国庆节冒险之旅：
+
+1. **封面与开始** - 点击按钮开始故事
+2. **接受任务** - 从猫头鹰村长那里接受重要任务
+3. **制作“鸡毛信”** - 为紧急任务封装特殊包裹
+4. **勇敢出发** - 开始送信之旅
+5. **悄悄经过瞌睡熊** - 学会小心和安静
+6. **得到风宝宝的帮助** - 化敌为友的智慧
+7. **看到派对广场** - 发现目的地的美好
+8. **成功送达** - 完成核心任务
+9. **点亮生日蛋糕** - 见证庆典的高潮
+10. **英雄的荣耀** - 获得应有的奖励和赞美
+
+## 🛠️ 技术栈
+
+- **Next.js 15** - React 框架
+- **TypeScript** - 类型安全
+- **Tailwind CSS** - 样式框架
+- **Framer Motion** - 动画库
+- **Lucide React** - 图标库
+
+## 🎮 交互说明
+
+每个页面都有独特的交互方式：
+- 点击、悬停、拖拽等不同交互
+- 实时动画反馈
+- 音效提示
+- 渐进式故事展开
+
+## 📁 项目结构
+
+```
+src/
+├── app/
+│   ├── globals.css          # 全局样式
+│   └── page.tsx             # 主应用页面
+├── components/
+│   └── pages/               # 各个故事页面组件
+│       ├── CoverPage.tsx    # 封面页
+│       ├── MissionPage.tsx  # 任务页
+│       ├── PackagePage.tsx  # 包装页
+│       ├── DeparturePage.tsx# 出发页
+│       ├── BearPage.tsx     # 瞌睡熊页
+│       ├── WindPage.tsx     # 风宝宝页
+│       ├── PartyPage.tsx    # 派对广场页
+│       ├── DeliveryPage.tsx # 送达页
+│       ├── CakePage.tsx     # 蛋糕页
+│       └── VictoryPage.tsx  # 胜利页
+├── hooks/
+│   ├── useSound.ts          # 音效管理hook
+│   └── usePageTransition.ts # 页面切换hook
+└── styles/
+    └── animations.css       # 动画样式
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎵 音效文件
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+应用需要以下音效文件（放在 `public/sounds/` 目录）：
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `magic_chime.mp3` - 魔法音效
+- `sparkle.mp3` - 闪亮音效
+- `swoosh.mp3` - 嗖声音效
+- `wing_flap.mp3` - 翅膀扇动
+- `positive_chime.mp3` - 积极音效
+- `distant_party_music.mp3` - 远处派对音乐
+- `crowd_cheer.mp3` - 群众欢呼
+- `celebration_music.mp3` - 庆祝音乐
 
-## Learn More
+*注：音效文件为可选项，缺失时应用仍能正常运行*
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 本地开发
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# 安装依赖
+npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 启动开发服务器
+npm run dev
 
-## Deploy on Vercel
+# 构建生产版本
+npm run build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📱 响应式支持
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **桌面端**: 完整的悬停效果和详细动画
+- **移动端**: 触摸友好的交互和适配的布局
+- **平板**: 中等尺寸的优化体验
+
+## 🎨 设计亮点
+
+- 每个页面都有独特的配色方案
+- 卡通风格的SVG插图，边缘圆润
+- 平滑的页面过渡动画
+- 丰富的粒子效果和视觉反馈
+- 符合儿童审美的色彩搭配
+
+## 📱 在线体验
+
+访问: [https://guoqing.vercel.app](https://guoqing.vercel.app)
+
+## 📜 许可证
+
+MIT License
+
+## 🙏 致谢
+
+感谢所有为国庆节庆典贡献力量的朋友们！
+
+---
+
+**祝大家国庆节快乐！** 🇨🇳🎊
