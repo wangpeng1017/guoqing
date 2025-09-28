@@ -20,6 +20,8 @@ import VictoryPage from '@/components/pages/VictoryPage';
 export default function Home() {
   const { currentPage, nextPage, resetToFirstPage } = usePageTransition();
   const { preloadSounds } = useSound();
+  
+  console.log('Home component rendered, currentPage:', currentPage); // Debug
 
   // 预加载音效
   useEffect(() => {

@@ -12,14 +12,18 @@ export function usePageTransition() {
   ], []);
 
   const nextPage = useCallback(async () => {
+    console.log('nextPage called, currentPage:', currentPage); // Debug
     const currentIndex = pages.indexOf(currentPage);
+    console.log('currentIndex:', currentIndex, 'pages.length:', pages.length); // Debug
     if (currentIndex < pages.length - 1) {
       setIsTransitioning(true);
       
       // 添加过渡延迟
       await new Promise(resolve => setTimeout(resolve, 300));
       
-      setCurrentPage(pages[currentIndex + 1]);
+      const nextPageName = pages[currentIndex + 1];
+      console.log('switching to page:', nextPageName); // Debug
+      setCurrentPage(nextPageName);
       setIsTransitioning(false);
     }
   }, [currentPage, pages]);

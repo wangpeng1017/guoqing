@@ -13,13 +13,15 @@ export default function CoverPage({ onNext }: CoverPageProps) {
   const { playSound } = useSound();
 
   const handleStartStory = () => {
+    console.log('handleStartStory called'); // Debug
     setIsActivated(true);
     playSound('magic_chime.mp3', { volume: 0.6 });
     
-    // 延迟跳转到下一页
+    // 立即跳转测试
     setTimeout(() => {
+      console.log('calling onNext'); // Debug
       onNext();
-    }, 2000);
+    }, 100); // 缩短延迟以便测试
   };
 
   return (
