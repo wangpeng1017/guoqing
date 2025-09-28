@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 import { useSound } from '@/hooks/useSound';
 
 interface VictoryPageProps {
-  onNext: () => void;
+  onNext?: () => void; // Optional since it's not used
 }
 
-export default function VictoryPage({ }: VictoryPageProps) {
+export default function VictoryPage({ onNext }: VictoryPageProps) {
   const [medalGiven, setMedalGiven] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [showReplayButton, setShowReplayButton] = useState(false);

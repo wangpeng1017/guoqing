@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 
 // 页面组件导入
 import CoverPage from '@/components/pages/CoverPage';
+import TestCoverPage from '@/components/pages/TestCoverPage';
 import MissionPage from '@/components/pages/MissionPage';
 import PackagePage from '@/components/pages/PackagePage';
 import DeparturePage from '@/components/pages/DeparturePage';
@@ -40,7 +41,7 @@ export default function Home() {
   const renderCurrentPage = () => {
     switch (currentPage) {
       case 'cover':
-        return <CoverPage onNext={nextPage} />;
+        return <TestCoverPage onNext={nextPage} />;
       case 'mission':
         return <MissionPage onNext={nextPage} />;
       case 'package':
@@ -60,7 +61,7 @@ export default function Home() {
       case 'victory':
         return <VictoryPage onNext={nextPage} />;
       default:
-        return <CoverPage onNext={nextPage} />;
+        return <TestCoverPage onNext={nextPage} />;
     }
   };
 
